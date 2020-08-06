@@ -29,6 +29,7 @@ $gutter: $grid-gutter-width;
 		font-family: $fname;
 		font-style: $fstyle;
 		font-weight: $fweight;
+		font-display: swap;
 		// font-display: swap; // Uncomment to initially display system fonts
 		src: local($fname), url($furl) format('woff2');
 	}
@@ -43,9 +44,9 @@ $gutter: $grid-gutter-width;
 @include font('Lato', normal, 700, '../fonts/Lato-Heavy.ttf');
 @include font('Lato', normal, 800, '../fonts/Lato-Bold.ttf');
 @include font('Lato', normal, 900, '../fonts/Lato-Black.ttf');
-@include font('Montserrat', normal, 400, '../fonts/Montserrat-Regular.ttf');
-@include font('Montserrat', normal, 500, '../fonts/Montserrat-Medium.ttf');
-@include font('Montserrat', normal, 700, '../fonts/Montserrat-Bold.ttf');
+@include font('Montserrat', normal, 400, '../fonts/Montserrat-Regular.woff2');
+@include font('Montserrat', normal, 500, '../fonts/Montserrat-Medium.woff2');
+@include font('Montserrat', normal, 700, '../fonts/Montserrat-Bold.woff2');
 
 // GENERAL DOCUMENT STYLES
 
