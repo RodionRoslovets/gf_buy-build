@@ -16,24 +16,170 @@
 <body>
 
 	<header class="header">
-		<section class="header-top">
+		<section class="header-top wrapper">
 
-			<div class="city-pick" style="font-family:Lato">
-				hello
-			</div>
+			<div class="city-and-menu">
+				<div class="city-pick">
+					<figure class="city-pick__icon">
+						<svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M11 5.89474C11 7.23108 10.2703 9.03119 9.12008 10.8427C8.1834 12.318 7.04071 13.6871 6 14.6674C4.9593 13.6871 3.81661 12.318 2.87992 10.8427C1.72972 9.03119 1 7.23108 1 5.89474C1 3.20806 3.22182 1 6 1C8.77818 1 11 3.20806 11 5.89474Z"
+								stroke="#1E1C2D" stroke-width="2" />
+							<circle cx="6" cy="6" r="1" stroke="#1E1C2D" stroke-width="2" />
+						</svg>
+					</figure>
+					<div class="city-pick__pick">
+						<span class="city-pick__label">Ваш город: </span>
+						<span class="city-pick__city-name">Симферополь </span>
+						<svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1 1L4 4L7 1" stroke="#0050FF" stroke-width="2" />
+						</svg>
+					</div>
+				</div>
 
-			<div class="header-top-menu">
-				hello
+				<div class="header-top-menu">
+					<ul class="header-top-menu__list">
+						<li class="header-top-menu__list-item"><a href="/">О компании</a></li>
+						<li class="header-top-menu__list-item"><a href="/">Услуги</a></li>
+						<li class="header-top-menu__list-item"><a href="/">Доставка/Оплата</a></li>
+						<li class="header-top-menu__list-item"><a href="/">Правила торговли</a></li>
+						<li class="header-top-menu__list-item"><a href="/">Контакты</a></li>
+					</ul>
+				</div>
 			</div>
 
 			<div class="login">
-				hello
+				<figure class="login-icon">
+					<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M3 4V1H13V13H3V10" stroke="#2A2A2A" stroke-width="2" />
+						<path d="M0 7H9M9 7L6 4M9 7L6 10" stroke="#2A2A2A" stroke-width="2" />
+					</svg>
+				</figure>
+				<a href="/" class="login-link">Вход</a>
 			</div>
 
 		</section>
 
-		<section class="header-bottom">
+		<section class="header-middle wrapper">
 
+			<figure class="logo">
+				<svg width="161" height="48" viewBox="0 0 161 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M63.02 11.8L67.16 19H61.84L59.16 13.94H57.84V19H53.12V5H57.84V10.22H59.28L62.26 5H67.18L63.02 11.8ZM82.533 5L76.913 15.54C76.2463 16.7933 75.4263 17.7467 74.453 18.4C73.493 19.0533 72.433 19.38 71.273 19.38C70.3796 19.38 69.473 19.1933 68.553 18.82L69.653 15.42C70.2396 15.58 70.7196 15.66 71.093 15.66C71.4396 15.66 71.733 15.6 71.973 15.48C72.2263 15.36 72.4663 15.16 72.693 14.88L67.333 5H72.313L75.093 10.9L77.973 5H82.533ZM97.0534 5V19H92.4134V8.66H88.1534V19H83.5134V5H97.0534ZM99.5291 5H104.169V12.28L108.989 5H113.429V19H108.789V11.74L103.989 19H99.5291V5Z"
+						fill="#1E1C2D" />
+					<path
+						d="M66.78 29V43H62.14V32.66H57.88V43H53.24V29H66.78ZM76.3756 43.32C74.869 43.32 73.5156 43.0067 72.3156 42.38C71.1156 41.7533 70.1756 40.8867 69.4956 39.78C68.8156 38.66 68.4756 37.4 68.4756 36C68.4756 34.6 68.8156 33.3467 69.4956 32.24C70.1756 31.12 71.1156 30.2467 72.3156 29.62C73.5156 28.9933 74.869 28.68 76.3756 28.68C77.8823 28.68 79.2356 28.9933 80.4356 29.62C81.6356 30.2467 82.5756 31.12 83.2556 32.24C83.9356 33.3467 84.2756 34.6 84.2756 36C84.2756 37.4 83.9356 38.66 83.2556 39.78C82.5756 40.8867 81.6356 41.7533 80.4356 42.38C79.2356 43.0067 77.8823 43.32 76.3756 43.32ZM76.3756 39.5C76.9623 39.5 77.489 39.36 77.9556 39.08C78.4356 38.7867 78.8156 38.38 79.0956 37.86C79.3756 37.3267 79.5156 36.7067 79.5156 36C79.5156 35.2933 79.3756 34.68 79.0956 34.16C78.8156 33.6267 78.4356 33.22 77.9556 32.94C77.489 32.6467 76.9623 32.5 76.3756 32.5C75.789 32.5 75.2556 32.6467 74.7756 32.94C74.309 33.22 73.9356 33.6267 73.6556 34.16C73.3756 34.68 73.2356 35.2933 73.2356 36C73.2356 36.7067 73.3756 37.3267 73.6556 37.86C73.9356 38.38 74.309 38.7867 74.7756 39.08C75.2556 39.36 75.789 39.5 76.3756 39.5ZM93.0144 43.32C91.5344 43.32 90.201 43.0133 89.0144 42.4C87.8277 41.7733 86.8944 40.9067 86.2144 39.8C85.5477 38.68 85.2144 37.4133 85.2144 36C85.2144 34.5867 85.5477 33.3267 86.2144 32.22C86.8944 31.1 87.8277 30.2333 89.0144 29.62C90.201 28.9933 91.5344 28.68 93.0144 28.68C94.3744 28.68 95.5877 28.92 96.6544 29.4C97.721 29.88 98.601 30.5733 99.2944 31.48L96.3144 34.14C95.4477 33.0467 94.4277 32.5 93.2544 32.5C92.2677 32.5 91.4744 32.82 90.8744 33.46C90.2744 34.0867 89.9744 34.9333 89.9744 36C89.9744 37.0667 90.2744 37.92 90.8744 38.56C91.4744 39.1867 92.2677 39.5 93.2544 39.5C94.4277 39.5 95.4477 38.9533 96.3144 37.86L99.2944 40.52C98.601 41.4267 97.721 42.12 96.6544 42.6C95.5877 43.08 94.3744 43.32 93.0144 43.32ZM112.543 32.66H108.443V43H103.803V32.66H99.7028V29H112.543V32.66ZM120.839 29C122.133 29 123.259 29.2133 124.219 29.64C125.179 30.0667 125.919 30.68 126.439 31.48C126.959 32.28 127.219 33.2133 127.219 34.28C127.219 35.3467 126.959 36.28 126.439 37.08C125.919 37.88 125.179 38.4933 124.219 38.92C123.259 39.3467 122.133 39.56 120.839 39.56H118.819V43H114.099V29H120.839ZM120.539 35.92C121.179 35.92 121.659 35.78 121.979 35.5C122.299 35.2067 122.459 34.8 122.459 34.28C122.459 33.76 122.299 33.36 121.979 33.08C121.659 32.7867 121.179 32.64 120.539 32.64H118.819V35.92H120.539ZM135.965 43.32C134.459 43.32 133.105 43.0067 131.905 42.38C130.705 41.7533 129.765 40.8867 129.085 39.78C128.405 38.66 128.065 37.4 128.065 36C128.065 34.6 128.405 33.3467 129.085 32.24C129.765 31.12 130.705 30.2467 131.905 29.62C133.105 28.9933 134.459 28.68 135.965 28.68C137.472 28.68 138.825 28.9933 140.025 29.62C141.225 30.2467 142.165 31.12 142.845 32.24C143.525 33.3467 143.865 34.6 143.865 36C143.865 37.4 143.525 38.66 142.845 39.78C142.165 40.8867 141.225 41.7533 140.025 42.38C138.825 43.0067 137.472 43.32 135.965 43.32ZM135.965 39.5C136.552 39.5 137.079 39.36 137.545 39.08C138.025 38.7867 138.405 38.38 138.685 37.86C138.965 37.3267 139.105 36.7067 139.105 36C139.105 35.2933 138.965 34.68 138.685 34.16C138.405 33.6267 138.025 33.22 137.545 32.94C137.079 32.6467 136.552 32.5 135.965 32.5C135.379 32.5 134.845 32.6467 134.365 32.94C133.899 33.22 133.525 33.6267 133.245 34.16C132.965 34.68 132.825 35.2933 132.825 36C132.825 36.7067 132.965 37.3267 133.245 37.86C133.525 38.38 133.899 38.7867 134.365 39.08C134.845 39.36 135.379 39.5 135.965 39.5ZM145.564 29H150.204V36.28L155.024 29H159.464V43H154.824V35.74L150.024 43H145.564V29ZM152.504 28.2C150.958 28.2 149.844 27.9133 149.164 27.34C148.484 26.7667 148.144 25.9067 148.144 24.76H151.284C151.284 25.2133 151.371 25.54 151.544 25.74C151.731 25.94 152.051 26.04 152.504 26.04C152.958 26.04 153.278 25.94 153.464 25.74C153.664 25.54 153.764 25.2133 153.764 24.76H156.904C156.904 25.9067 156.558 26.7667 155.864 27.34C155.171 27.9133 154.051 28.2 152.504 28.2Z"
+						fill="#0050FF" />
+					<path d="M0 16C0 9.37258 5.37258 4 12 4H40V44H0V16Z" fill="#FCD946" />
+					<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="4" width="40" height="40">
+						<path d="M0 4H40V44H0V4Z" fill="#FCD946" />
+					</mask>
+					<g mask="url(#mask0)">
+						<rect x="-4" width="18" height="18" fill="#FF9900" />
+						<path d="M19 23L47.5136 -3L47.5135 23L19 23Z" fill="#1E1C2D" />
+					</g>
+					<rect x="19" y="23" width="21" height="21" fill="#0050FF" />
+				</svg>
+			</figure>
+
+			<div class="vert-line"></div>
+
+			<p class="shop-description">
+				Интернет-магазин кровельных <br> и строительных материалов в Крыму
+			</p>
+
+			<div class="working-hours">
+				<figure class='working-hours__icon'>
+					<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<circle cx="8" cy="8" r="7" stroke="white" stroke-width="2" />
+						<path d="M8 4V8L11 10" stroke="white" stroke-width="2" />
+					</svg>
+				</figure>
+				<p class="working-hours__hours">
+					с 08.00 до 20.00
+					<br> без выходных
+				</p>
+				<figure class='working-hours__icon'>
+					<svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect x="1" y="1" width="8" height="13" rx="1" stroke="white" stroke-width="2" />
+						<circle cx="5" cy="11" r="1" fill="white" />
+					</svg>
+				</figure>
+				<div class="working-hours__phone">
+					<a href="tel:8 800 456 56 46">8 800 456 56 46</a>
+					<br>
+					<span class="working-hours__callback">Заказать звонок</span>
+				</div>
+			</div>
+
+			<div class="header-controls">
+				<a href="/">
+					<figure class="header-controls__icon">
+						<svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M14 1H2" stroke="white" stroke-width="2" />
+							<path d="M11 13H5" stroke="white" stroke-width="2" />
+							<path d="M5 5H0C0 6 0.5 8 2.5 8C4.5 8 5 6 5 5Z" fill="white" />
+							<path d="M16 5H11C11 6 11.5 8 13.5 8C15.5 8 16 6 16 5Z" fill="white" />
+							<path d="M8 12V0" stroke="white" stroke-width="2" />
+						</svg>
+					</figure>
+					<p class="header-controls__description">Сравнение</p>
+				</a>
+				<a href="/">
+					<figure class="header-controls__icon">
+						<svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M6.29605 2.59785L7 3.29554L7.70395 2.59785L8.55314 1.75619C9.57043 0.747935 11.2234 0.747935 12.2407 1.75619C13.2531 2.75955 13.2531 4.38258 12.2407 5.38593L7 10.5801L1.75926 5.38593C0.746914 4.38258 0.746914 2.75955 1.75926 1.75619C2.77655 0.747935 4.42957 0.747935 5.44686 1.75619L6.29605 2.59785Z"
+								stroke="white" stroke-width="2" />
+						</svg>
+					</figure>
+					<p class="header-controls__description">Избранное</p>
+				</a>
+				<a href="/">
+					<figure class="header-controls__icon">
+						<svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M3.04002 13L1.32573 7H14.6743L12.96 13H3.04002Z" stroke="white" stroke-width="2" />
+							<path d="M4 7L6 1" stroke="white" stroke-width="2" />
+							<path d="M12 7L10 1" stroke="white" stroke-width="2" />
+						</svg>
+						<p class="header-controls__icon-count">12</p>
+					</figure>
+					<p class="header-controls__description">Корзина</p>
+				</a>
+			</div>
+		</section>
+
+		<section class="header-bottom wrapper">
+			<div class="col-sm-3">
+				<div class="header-bottom__menu">
+					<figure class='header-bottom__menu-icon'>
+						<svg width="24" height="14" viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect width="24" height="2" fill="#1E1C2D" />
+							<rect y="6" width="24" height="2" fill="#1E1C2D" />
+							<rect y="12" width="24" height="2" fill="#1E1C2D" />
+						</svg>
+					</figure>
+
+					<div class="vert-line"></div>
+
+					<p class="header-bottom__menu-name">Каталог товаров</p>
+				</div>
+			</div>
+			<div class="col-sm-9">
+				<form action="/" class="header-bottom__search">
+					<label>
+						<div class="header-bottom__search-icon">
+							<svg width="17" height="18" viewBox="0 0 17 18" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<circle cx="7.5" cy="7.5" r="6.5" stroke="#1E1C2D" stroke-width="2" />
+								<path d="M12 13L16 17" stroke="#1E1C2D" stroke-width="2" />
+							</svg>
+						</div>
+						<input type="search" class="header-bottom__search-field" placeholder="Умный поиск по сайту">
+					</label>
+					<input type="submit" value="Искать">
+				</form>
+			</div>
 		</section>
 	</header>
 
@@ -44,4 +190,5 @@
 	<script src="js/app.min.js"></script>
 
 </body>
+
 </html>

@@ -1,0 +1,189 @@
+.header{
+    padding:16px 0 0 0;
+}
+
+.header-top{
+    @include flex;
+    font-size:$fontsize - 2px;
+    &-menu{
+        flex-grow:1;
+
+        &__list{
+            @include flex;
+            list-style:none;
+            &-item a{
+                color:$black;
+                font-family:$montserrat;
+            }
+        }
+    }
+}
+
+.header-middle{
+    @include flex;
+    font-size:$fontsize - 2px;
+    padding: 16px 0;
+    & .vert-line{
+        background:$liht-grey;
+    }
+}
+
+.header-bottom{
+    @include flex;
+    font-size:$fontsize - 2px;
+    &__menu{
+        @include flex;
+        padding: 0 16px;
+        background:$yellow;
+        border-radius: 8px;
+        &-name{
+            text-transform: uppercase;
+            color:$black;
+            font-weight: bold;
+            width: 75%;
+        }
+    }
+    & .vert-line{
+        background:#fff;
+    }
+
+    &__search{
+        @include flex();
+        
+        & label{
+            @include flex();
+            width: 100%;
+            border: 1px solid #DCD9E3;
+            border-right: none;
+            padding: 10px 16px;
+            border-radius: 8px 0 0 8px;
+        }
+        &-field{
+            width: 100%;
+            margin:  0 0 0 16px;
+            border:none;
+        }
+
+        & input[type="submit"]{
+            background: $yellow;
+            color:$black;
+            border:none;
+            padding:10px 40px;
+            border-radius: 0 8px 8px 0 ;
+            font-size: $fontsize;
+        }
+    }
+    .col-sm-3{
+        padding-left:0;
+    }
+    .col-sm-9{
+        padding-right:0;
+    }
+}
+
+.city-and-menu{
+    @include flex;
+    flex-grow:.4;
+}
+
+.city-pick{
+    @include flex;
+    margin:0 24px 0 0;
+    &__icon{
+        margin: 0 14px 0 0;
+    }
+    &__label{
+        color:$grey;
+    }
+    &__city-name{
+        color:$blue;
+    }
+}
+
+.login{
+    @include flex;
+    &-icon{
+        margin: 0 14px 0 0;
+    }
+    &-link{
+        color:$black;
+        font-weight: 500;
+    }
+}
+
+.working-hours{
+    @include flex('space-between','flex-start');
+    color:$black;
+    flex-grow: .2;
+    position: relative;
+    top: 5px;
+    &__icon{
+        background:$blue;
+        width: 24px;
+        height: 24px;
+        text-align: center;
+        padding-top: 1px;
+        border-radius:50%;
+    }
+    &__phone{
+        & a{
+            color:$black;
+            font-size:$fontsize + 4px;
+            font-weight: bold;
+            font-family: $montserrat;
+            position: relative;
+            top:-5px;
+        }
+    }
+    &__hours{
+        font-weight: bold;
+    }
+    &__callback{
+        color:$blue;
+        position: relative;
+        top:-5px;
+    }
+}
+
+.header-controls{
+    @include flex;
+    & a{
+        display:block;
+        padding: 0 16px;
+        color:$black;
+        &:last-child{
+            padding-right: 0;
+        }
+    }
+    &__icon{
+        margin: auto;
+        background:$blue;
+        position:relative;
+        width: 24px;
+        height: 24px;
+        text-align: center;
+        padding-top: 1px;
+        border-radius:50%;
+        &-count{
+            position: absolute;
+            font-size: $fontsize / 2;
+            color:#fff;
+            width: 16px;
+            height: 16px;
+            top:-3px;
+            right: -5px;
+            background:$red;
+            border:2px solid #fff;
+            border-radius: 50%;
+}
+    }
+}
+
+.shop-description{
+    color:$grey;
+}
+
+.vert-line{
+    height: 48px;
+    width: 1px;
+}

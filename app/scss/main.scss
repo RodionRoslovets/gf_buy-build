@@ -1,5 +1,21 @@
 @import 'config';
+@import 'header';
 
 // CUSTOM USER STYLES & IMPORTS
+body{
+    background: #fff;
+}
+.wrapper{
+    width: 100%;
+    max-width: 1170px;
+    margin:0 auto;
+}
 
-
+figure,
+ul,
+li,
+p,
+label{
+    margin:0;
+    padding:0;
+}

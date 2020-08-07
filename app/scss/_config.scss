@@ -19,8 +19,9 @@ $gutter: $grid-gutter-width;
 
 @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'; // Bootstrap Reboot collection
 @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss'; // Bootstrap Breakpoints mixin
-// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss'; // Optional Bootstrap Grid
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss'; // Optional Bootstrap Grid
 // @import 'node_modules/bootstrap/scss/utilities/_sizing.scss'; // Optional Bootstrap Utilites
+@import '_vars';
 
 // FONTS LOAD SECTION
 
@@ -33,6 +34,12 @@ $gutter: $grid-gutter-width;
 		// font-display: swap; // Uncomment to initially display system fonts
 		src: local($fname), url($furl) format('woff2');
 	}
+}
+
+@mixin flex($justify:space-between, $align:center){
+	display:flex;
+	align-items: $align;
+	justify-content: $justify;
 }
 
 // @include font('Roboto', normal, 400, '../fonts/roboto-regular-webfont.woff2');
@@ -51,7 +58,7 @@ $gutter: $grid-gutter-width;
 // GENERAL DOCUMENT STYLES
 
 ::placeholder {
-	color: #666;
+	color: $grey;
 }
 
 ::selection {
