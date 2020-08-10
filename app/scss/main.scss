@@ -20,3 +20,42 @@ label{
     margin:0;
     padding:0;
 }
+
+.banner{
+    background:$grey;
+    border-radius: 8px;
+    height: 220px;
+}
+
+main{
+    padding: 0 0 24px 0;
+}
+
+.catalog{
+    padding:24px 0;
+}
+
+.category{
+    &-heading{
+        @include flex;
+        padding:12px 0 0 0;
+    }
+    & .name{
+        font-family: $montserrat;
+        font-size: $fontsize - 2px;
+        font-weight: 500;
+    }
+
+    & .line{
+        width: 100%;
+        height: 1px;
+        background: $light-grey;
+    }
+
+    &-image{
+        & img{
+            width: 100%;
+            border-radius: 8px;
+        }
+    }
+}

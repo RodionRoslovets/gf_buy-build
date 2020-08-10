@@ -1,5 +1,5 @@
 .header{
-    padding:16px 0 0 0;
+    padding:16px 0 24px 0;
 }
 
 .header-top{
@@ -24,7 +24,7 @@
     font-size:$fontsize - 2px;
     padding: 16px 0;
     & .vert-line{
-        background:$liht-grey;
+        background:$light-grey;
     }
 }
 
