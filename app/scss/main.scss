@@ -199,3 +199,44 @@ main{
         margin: 0 24px 24px 0;
     }
 }
+
+.manufacturers{
+    background: rgba(172, 167, 182, .05);
+    padding:61px 0 46px 0;
+    &-heading{
+        @include flex;
+        padding-bottom: 32px;
+        & p{
+            font-family: $montserrat;
+            text-transform: uppercase;
+            font-size:$fontsize + 8px;
+            font-weight: bold;
+        }
+    }
+
+    &__arrows{
+        @include flex;
+        height: 32px;
+    }
+
+    &__arrow{
+        background:#fff;
+        border: 1px solid $light-grey;
+        color:$blue;
+        font-weight: bold;
+        width: 32px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    &__image{
+        background:#fff;
+        width: 175px;
+        height: 175px;
+        border-radius: 8px;
+        @include flex('center', 'center');
+        & img{
+            width: 90%;
+        }
+    }
+}
