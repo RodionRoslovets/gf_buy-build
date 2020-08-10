@@ -59,3 +59,143 @@ main{
         }
     }
 }
+
+.bestsellers{
+    padding-top: 80px;
+    &-heading{
+        @include flex;
+        padding-bottom: 32px;
+        & p{
+            font-family: $montserrat;
+            text-transform: uppercase;
+            font-size:$fontsize + 8px;
+            font-weight: bold;
+        }
+    }
+
+    &__arrows{
+        @include flex;
+        height: 32px;
+    }
+
+    &__arrow{
+        background:#fff;
+        border: 1px solid $light-grey;
+        color:$blue;
+        font-weight: bold;
+        width: 32px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    &-card{
+        padding:0 10px;
+    }
+
+    &__image img{
+        width: 90%;
+    }
+
+    &__plate{
+        display: inline-block;
+        padding: 0 4px;
+        border-radius: 4px;
+        height: 20px;
+        line-height: 20px;
+        color:#fff;
+        width: fit-content;
+        font-size:$fontsize - 4px;
+        &_blue{
+            background: $blue;
+        }
+        &_red{
+            background: $red;
+        }
+    }
+
+    &__name{
+        padding:16px 0;
+        font-weight: 500;
+        line-height: 24px;
+        min-height: 104px;
+    }
+
+    &__price-block{
+        @include flex;
+        & button{
+            background:$yellow;
+            color:$black;
+            border:none;
+            padding: 4px 14px;
+            border-radius: 6px;
+            -webkit-border-radius: 6px;
+            -moz-border-radius: 6px;
+            -ms-border-radius: 6px;
+            -o-border-radius: 6px;
+        }
+    }
+
+    & .line{
+        height: 1px;
+        background: $light-grey;
+        margin: 16px 0;
+    }
+
+    &__price{
+        font-size:$fontsize + 2px;
+        font-weight: bold;
+    }
+
+    &__controls{
+        @include flex;
+        & p{
+            color:$grey;
+            font-size:$fontsize - 2px;
+        }
+
+        &-icons{
+            @include flex;
+            & figure:not(:last-child){
+                margin-right:16px;
+            }
+        }
+    }
+
+}
+
+.arrow{
+    &_left{
+        border-right: none;
+        border-radius: 6px 0 0 6px;
+        -webkit-border-radius: 6px 0 0 6px;
+        -moz-border-radius: 6px 0 0 6px;
+        -ms-border-radius: 6px 0 0 6px;
+        -o-border-radius: 6px 0 0 6px;
+    }
+    &_right{
+        border-radius: 0 6px 6px 0;
+        -webkit-border-radius: 0 6px 6px 0;
+        -moz-border-radius: 0 6px 6px 0;
+        -ms-border-radius: 0 6px 6px 0;
+        -o-border-radius: 0 6px 6px 0;
+    }
+}
+
+.article{
+    padding:36px 0;
+    &__heading{
+        font-family: $montserrat;
+        text-transform: uppercase;
+        font-size:$fontsize + 8px;
+        font-weight: bold;
+        margin-bottom:36px;
+    }
+    &__image{
+        width: 474px;
+        height: 290px;
+        background:$grey;
+        border-radius: 8px;
+        float:left;
+        margin: 0 24px 24px 0;
+    }
+}
