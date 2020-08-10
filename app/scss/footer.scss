@@ -1,0 +1,101 @@
+.footer-top{
+    background:$yellow;
+    padding:64px 0 26px;
+
+    & .line{
+        background-color:$black;
+        width: 100%;
+        height: 1px;
+    }
+
+    &__copyright{
+        flex-basis: 175px;
+        & .shop-description_footer{
+            font-size: $fontsize - 4px;
+            margin: 16px 0 19px;
+        }
+
+        & .copyright{
+            font-size: $fontsize - 4px;
+            margin-top: 16px;
+        }
+    }
+
+    & .warning{
+        font-size: $fontsize - 4px;
+        padding-top: 24px;
+    }
+
+    &__contacts{
+        line-height: 40px;
+    }
+}
+
+.footer-bottom{
+    @include flex;
+
+    & a{
+        color:$grey;
+        font-size: $fontsize - 2px;
+        padding: 16px 0;
+    }
+}
+
+.footer-info{
+    @include flex('space-between', 'flex-start');
+
+    padding-bottom: 64px;
+}
+
+.footer-menu{
+    &__heading{
+        color:$black;
+        font-weight: 900;
+        opacity: 0.2;
+    }
+
+    &__list{
+        list-style:none;
+        line-height: 32px;
+        &-item a{
+            color:$black;
+            font-size: $fontsize - 2px;
+        }
+    }
+
+    &__phone{
+        font-family:$montserrat;
+        font-size: $fontsize + 4px;
+        & a{
+            color:$black;
+        }
+    }
+
+    &__email{
+        & a{
+            color:$black;
+            font-size: $fontsize - 2px;
+        }
+    }
+
+    &__working-hours{
+        font-size: $fontsize - 2px;
+    }
+
+    &__socials {
+        display:flex;
+        & a{
+            @include flex('center', 'center');
+            background:#fff;
+            width: 24px;
+            height: 24px;
+            border-radius: 4px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            -ms-border-radius: 4px;
+            -o-border-radius: 4px;
+            margin-right: 16px;
+        }
+    }
+}
+
