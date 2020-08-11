@@ -18,6 +18,9 @@
         & .copyright{
             font-size: $fontsize - 4px;
             margin-top: 16px;
+            @media screen and (max-width:767px){
+                display:none;
+            }
         }
     }
 
@@ -28,11 +31,21 @@
 
     &__contacts{
         line-height: 40px;
+        
+        @media screen and (max-width:767px){
+            padding: 16px 0;
+        }
     }
 }
 
 .footer-bottom{
     @include flex;
+
+    
+    @media screen and (max-width:767px){
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
     & a{
         color:$grey;
@@ -43,8 +56,10 @@
 
 .footer-info{
     @include flex('space-between', 'flex-start');
-
     padding-bottom: 64px;
+    @media screen and (max-width:767px){
+        flex-direction: column;
+    }
 }
 
 .footer-menu{

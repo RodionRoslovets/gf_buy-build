@@ -10,9 +10,15 @@ $(document).ready(()=>{
 		autoplay:true,
 		autoplayTimeout:3000,
 		responsive:{
+			800:{
+				items:2,
+			},
+			1000:{
+				items:3,
+			},
 			1200:{
 				items:4,
-			}
+			},
 		}
 
 	});
@@ -31,9 +37,15 @@ $(document).ready(()=>{
 		autoplay:true,
 		autoplayTimeout:3500,
 		responsive:{
+			800:{
+				items:2,
+			},
+			1000:{
+				items:3,
+			},
 			1200:{
 				items:6,
-			}
+			},
 		}
 	});
 

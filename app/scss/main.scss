@@ -10,6 +10,10 @@ body{
     width: 100%;
     max-width: 1170px;
     margin:0 auto;
+    
+    @media screen and (max-width:767px){
+        padding: 0 16px;
+    }
 }
 
 figure,
@@ -33,17 +37,33 @@ main{
 
 .catalog{
     padding:24px 0;
+    & .row{
+        @media screen and (max-width:767px){
+            overflow-x: auto;
+            flex-wrap: nowrap;
+        }
+    }
 }
 
 .category{
+    width: 16.66%;
+    padding: 0 10px;
+    @media screen and (max-width:767px){
+        width: 100%;
+        min-width: 150px;
+    }
     &-heading{
         @include flex;
         padding:12px 0 0 0;
+        & svg{
+            min-width: 12px;
+        }
     }
     & .name{
         font-family: $montserrat;
         font-size: $fontsize - 2px;
         font-weight: 500;
+        white-space: pre;
     }
 
     & .line{
@@ -197,6 +217,9 @@ main{
         border-radius: 8px;
         float:left;
         margin: 0 24px 24px 0;
+        @media screen and (max-width:767px){
+            width: 100%;
+        }
     }
 }
 
@@ -255,6 +278,10 @@ main{
 
     &__row{
         @include flex;
+        @media screen and (max-width:767px){
+            overflow-x: auto;
+        }
+        overflow-x: auto;
         &-item{
             position:relative;
         }
