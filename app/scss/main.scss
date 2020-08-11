@@ -240,3 +240,32 @@ main{
         }
     }
 }
+
+.advantages{
+    padding:61px 0 46px 0;
+    &-heading{
+        padding-bottom: 32px;
+        & p{
+            font-family: $montserrat;
+            text-transform: uppercase;
+            font-size:$fontsize + 8px;
+            font-weight: bold;
+        }
+    }
+
+    &__row{
+        @include flex;
+        &-item{
+            position:relative;
+        }
+        & figcaption{
+            position:absolute;
+            top: 43px;
+            width: 50%;
+            left: 82px;
+            color:#fff;
+            line-height: 19px;
+            font-weight: 700;
+        }
+    }
+}
