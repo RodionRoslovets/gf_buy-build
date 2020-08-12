@@ -55,4 +55,14 @@ $(document).ready(()=>{
 	$('.manufacturers__arrow.arrow_right').click(function() {
 		owlManufacturers.trigger('next.owl.carousel');
 	});
+
+	//каталог
+	$('.header-bottom__menu').on('click', ()=>{
+		$('.catalog-menu').fadeToggle();
+	});
+
+	$('.login-link').on('click', (e)=>{
+		e.preventDefault();
+		$('.login-panel').fadeToggle();
+	});
 });

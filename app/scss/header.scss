@@ -65,6 +65,7 @@
         padding: 0 16px;
         background:$yellow;
         border-radius: 8px;
+        cursor:pointer;
         &-name{
             text-transform: uppercase;
             color:$black;
@@ -146,6 +147,7 @@
 
 .login{
     @include flex;
+    position: relative;
     @media screen and (max-width:767px){
         padding:0 16px 0 0;
     }
@@ -251,4 +253,83 @@
             display:block;
         }
     }
+}
+
+.catalog-menu{
+    background:#fff;
+    padding:48px;
+    border-radius: 8px;
+    display:none;
+    position: absolute;
+    filter:drop-shadow(0px 16px 50px rgba(0, 31, 100, 0.2));
+    z-index: 11;
+    &__heading{
+        font-family: $montserrat;
+        font-weight: bold;
+        font-size: $fontsize;
+        line-height: 20px;
+        color: $black;
+    }
+
+    &__list{
+        padding: 0 0 56px 8px;
+        list-style: none;
+
+        & a{
+            font-family: $montserrat;
+            font-size: $fontsize - 2px;
+        }
+    }
+}
+
+.login-panel{
+    padding:8px;
+    background:#fff;
+    border-radius: 8px;
+    display:none;
+    position: absolute;
+    z-index: 11;
+    width: 275px;
+    right: 0;
+    top: 36px;
+    filter:drop-shadow(0px 16px 50px rgba(0, 31, 100, 0.2));
+        &__login{
+        background:$yellow;
+        width: 100%;
+        border:none;
+        border-radius: 6px;
+        color:$black;
+        font-weight: 500;
+        font-family: $montserrat;
+        height: 40px;
+        margin-bottom: 8px;
+    }
+
+    &__register{
+        border: 2px solid $blue;
+        border-radius: 6px;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        -ms-border-radius: 6px;
+        -o-border-radius: 6px;
+        color:$blue;
+        height: 40px;
+        font-weight: 500;
+        font-family: $montserrat;
+        background:#fff;
+        width: 100%;
+    }
+
+    & p{
+        text-align: center;
+        font-family: $montserrat;
+        font-weight: 500;
+        font-size: $fontsize - 2px;
+        color: $black;
+        margin: 16px 0;
+    }
+}
+
+.social-enter{
+    @include flex;
 }
