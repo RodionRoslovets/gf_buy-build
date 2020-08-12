@@ -1,0 +1,43 @@
+.catalog-categories{
+    padding: 36px 0;
+    &__heading{
+        font-family: $montserrat;
+        font-weight: bold;
+        font-size: $fontsize * 2;
+        line-height: 39px;
+        color: $black;
+        padding: 0 0 40px 0;
+    }
+}
+
+.catalog-category{
+    
+    &__item{
+
+        &-heading{
+            font-family: $montserrat;
+            font-weight: bold;
+            font-size: $fontsize;
+            line-height: 20px;
+            color: $black;
+            padding: 0 0 24px 0;
+            text-transform: uppercase;
+        }
+    }
+
+    &__subcategory{
+
+        &-heading{
+            font-family: $montserrat;
+            font-weight: bold;
+            font-size: $fontsize;
+            line-height: 28px;
+            color: $blue;
+        }
+
+        &-list{
+            list-style: none;
+            padding: 0 0 24px 8px;
+        }
+    }
+}
