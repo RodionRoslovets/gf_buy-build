@@ -1,0 +1,15 @@
+.category-wrapper{
+    padding-top:32px;
+}
+
+.other-categories{
+    display: flex;
+
+    &__item{
+        color: $blue;
+        background:$light-grey;
+        padding:8px 24px;
+        border-radius: 20px;
+        margin-right: 24px;
+    }
+}

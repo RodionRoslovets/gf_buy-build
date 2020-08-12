@@ -2,6 +2,7 @@
 @import 'header';
 @import 'footer';
 @import 'catalog';
+@import 'catalog-category';
 
 // CUSTOM USER STYLES & IMPORTS
 body{
@@ -295,6 +296,175 @@ main{
             color:#fff;
             line-height: 19px;
             font-weight: 700;
+        }
+    }
+}
+
+.breadcrumbs{
+    & .breadcrumb{
+        font-size:$fontsize - 2px;;
+        line-height: 17px;
+        color: $blue;
+
+        &-divider{
+            color:$yellow;
+        }
+
+        &_current{
+            font-size:$fontsize - 2px;;
+            line-height: 17px;
+            color: $grey;
+        }
+    }
+}
+
+.page-heading{
+    padding: 36px 0;
+    font-family: $montserrat;
+    font-weight: bold;
+    font-size: $fontsize * 2;
+    line-height: 39px;
+    color: $black;
+}
+
+.product-card{
+    border-radius: 8px;
+    padding:20px;
+
+    &:hover{
+        box-shadow: 0px 4px 20px rgba(205, 202, 237, 0.25);
+    }
+
+    &__image img{
+        width: 90%;
+    }
+
+    &__plate{
+        display: inline-block;
+        padding: 0 4px;
+        border-radius: 4px;
+        height: 20px;
+        line-height: 20px;
+        color:#fff;
+        width: fit-content;
+        font-size:$fontsize - 4px;
+        &_blue{
+            background: $blue;
+        }
+        &_red{
+            background: $red;
+        }
+    }
+
+    &__name{
+        padding:16px 0;
+        font-weight: 500;
+        line-height: 24px;
+        min-height: 104px;
+    }
+
+    &__price-block{
+        @include flex;
+        & button{
+            background:$yellow;
+            color:$black;
+            border:none;
+            padding: 4px 14px;
+            border-radius: 6px;
+            -webkit-border-radius: 6px;
+            -moz-border-radius: 6px;
+            -ms-border-radius: 6px;
+            -o-border-radius: 6px;
+        }
+    }
+
+    & .line{
+        height: 1px;
+        background: $light-grey;
+        margin: 16px 0;
+    }
+
+    &__price{
+        font-size:$fontsize + 2px;
+        font-weight: bold;
+    }
+
+    &__controls{
+        @include flex;
+        & p{
+            color:$grey;
+            font-size:$fontsize - 2px;
+        }
+
+        &-icons{
+            @include flex;
+            & figure:not(:last-child){
+                margin-right:16px;
+            }
+        }
+    }
+}
+
+.pagination-block{
+    @include flex;
+    padding:64px 0 90px;
+}
+
+
+.show-more{
+    color:$blue;
+}
+
+.pagination{
+    @include flex;
+    border: 1px solid $light-grey;
+    border-radius: 6px;
+
+    &-item{
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        cursor: pointer;
+        color:$blue;
+    }
+
+    &-curr{
+        background:$yellow;
+    }
+
+    &-prev{
+        border-right: 1px solid $light-grey;
+    }
+
+    &-next{
+        border-left: 1px solid $light-grey;
+    }
+}
+
+.category-sorting{
+    @include flex;
+    padding-bottom: 32px;
+
+    &__select{
+        & span{
+            color: $grey;
+        }
+
+        & select{
+            border:none;
+            color: $blue;
+
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+
+    &__display{
+        @include flex;
+
+        &-grid{
+            margin-right: 16px;
         }
     }
 }
