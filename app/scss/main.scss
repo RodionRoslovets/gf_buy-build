@@ -463,8 +463,319 @@ main{
     &__display{
         @include flex;
 
+        @media screen and (max-width:767px) {
+            display: none;
+        }
+
         &-grid{
             margin-right: 16px;
+        }
+    }
+
+    &__mobile-filters{
+        display: none;
+        @media screen and (max-width:767px) {
+            display: block;
+        }
+    }
+}
+
+.category-filter{
+    padding:24px;
+    margin-top: 24px;
+    border-radius: 8px;
+    background: #FBFAFC;
+
+    @media screen and (max-width:767px) {
+        display: none;
+        position:absolute;
+        top:0;
+        left: 0;
+    }
+
+    &__close{
+        position: absolute;
+        top:10px;
+        right:10px;
+        display: none;
+
+        @media screen and (max-width:767px) {
+            display: block;
+        }
+    }
+
+    & .line{
+        width: 100%;
+        height: 1px;
+        background:$light-grey;
+        margin:32px 0;
+    }
+
+    & button{
+        width: 100%;
+        border-radius: 6px;
+        height: 40px;
+        margin-bottom: 16px;
+    }
+
+    &__reset{
+        background:#fff;
+        border: 2px solid $blue;
+        color:$blue;
+        font-family: $montserrat;
+        font-weight: 500;
+
+    }
+
+    &__submit{
+        background:$yellow;
+        border: none;
+        color:$black;
+        font-family: $montserrat;
+        font-weight: 500;
+    }
+}
+
+.filter{
+    margin-bottom: 24px;
+    &-heading{
+        font-family: $montserrat;
+        font-weight: bold;
+        color: $black;
+        margin-bottom: 24px;
+    }
+}
+
+.price-filter{
+    &__inputs{
+        @include flex;
+
+        & input{
+            width: 75px;
+            margin-bottom: 24px;
+            border: 1px solid #EAE8F0;
+            border-radius: 4px;
+        }
+    }
+
+    &__slider{
+
+        &-base{
+            height: 6px;
+            border-radius: 3px;
+            background: #DCD9E3;
+            border: none!important;
+        }
+
+        &-range{
+            background: $yellow;
+        }
+
+        &-handle{
+            width: 16px!important;
+            height: 16px!important;
+            background:$blue!important;
+            border: none!important;
+            border-radius:50%;
+            -webkit-border-radius:50%;
+            -moz-border-radius:50%;
+            -ms-border-radius:50%;
+            -o-border-radius:50%;
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+}
+
+.color-filter{
+
+    &__colors{
+        @include flex;
+        flex-wrap: wrap;
+        padding-right: 35px;
+
+        & label{
+            margin: 0 16px 16px 0;
+        }
+
+        & input[type="checkbox"]{
+            display:none;
+        }
+    }
+
+    &__color{
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: $yellow;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+
+        &_active{
+            border:4px solid $blue!important;
+        }
+
+        &_light-yellow{
+            background: #F4E1AC;
+        }
+        &_white{
+            background: #fff;
+            border:1px solid $light-grey;
+        }
+        &_yellow{
+            background: $yellow;
+        }
+        &_green{
+            background: #146622;
+        }
+        &_brown{
+            background: #331101;
+        }
+        &_red{
+            background: #AF0801;
+        }
+        &_orange{
+            background: #FD8D00;
+        }
+        &_grey{
+            background: #B9B9B9;
+        }
+        &_blue{
+            background: #2951AC;
+        }
+        &_black{
+            background: #080808;
+        }
+        &_light-brown{
+            background: #804B36;
+        }
+        &_dark-grey{
+            background: #616161;
+        }
+    }
+}
+
+.type-filter{
+    & label{
+        width: 100%;
+        @include flex('flex-start', 'flex-start');
+    }
+
+    & input[type="checkbox"]{
+        display: none;
+    }
+
+    &__checkbox{
+        width: 16px;
+        height: 16px;
+        border: 2px solid $blue;
+        border-radius: 2px;
+        margin-right: 12px;
+        position: relative;
+        top:4px;
+
+        &_active{
+            background: $blue;
+        }
+
+        & svg{
+            position: relative;
+            top:-7px;
+            left:1px;
+        }
+    }
+}
+
+.surface-filter{
+    & label{
+        width: 100%;
+        @include flex('flex-start', 'flex-start');
+    }
+
+    & input[type="checkbox"]{
+        display: none;
+    }
+
+    &__checkbox{
+        width: 16px;
+        height: 16px;
+        border: 2px solid $blue;
+        border-radius: 2px;
+        margin-right: 12px;
+        position: relative;
+        top:4px;
+
+        &_active{
+            background: $blue;
+        }
+
+        & svg{
+            position: relative;
+            top:-7px;
+            left:1px;
+        }
+    }
+}
+.coverage-filter{
+    & label{
+        width: 100%;
+        @include flex('flex-start', 'flex-start');
+    }
+
+    & input[type="checkbox"]{
+        display: none;
+    }
+
+    &__checkbox{
+        width: 16px;
+        height: 16px;
+        border: 2px solid $blue;
+        border-radius: 2px;
+        margin-right: 12px;
+        position: relative;
+        top:4px;
+
+        &_active{
+            background: $blue;
+        }
+
+        & svg{
+            position: relative;
+            top:-7px;
+            left:1px;
+        }
+    }
+}
+.facing-filter{
+    & label{
+        width: 100%;
+        @include flex('flex-start', 'flex-start');
+    }
+
+    & input[type="checkbox"]{
+        display: none;
+    }
+
+    &__checkbox{
+        width: 16px;
+        height: 16px;
+        border: 2px solid $blue;
+        border-radius: 2px;
+        margin-right: 12px;
+        position: relative;
+        top:4px;
+
+        &_active{
+            background: $blue;
+        }
+
+        & svg{
+            position: relative;
+            top:-7px;
+            left:1px;
         }
     }
 }

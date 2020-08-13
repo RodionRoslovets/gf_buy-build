@@ -2,8 +2,19 @@
     padding-top:32px;
 }
 
+.categoty-page{
+    .col-md-3{
+        z-index: 11;
+    }
+    .col-md-9{
+        z-index: 0;
+    }
+
+}
+
 .other-categories{
     display: flex;
+    overflow-x: auto;
 
     &__item{
         color: $blue;
@@ -11,5 +22,9 @@
         padding:8px 24px;
         border-radius: 20px;
         margin-right: 24px;
+
+        & a{
+            white-space: nowrap;
+        }
     }
 }
