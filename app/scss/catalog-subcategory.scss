@@ -1,0 +1,38 @@
+
+.subcategoty-page{
+
+    .col-md-3{
+        z-index: 11;
+        padding-top: 32px;
+    }
+    .col-md-9{
+        z-index: 0;
+    }
+
+    .line{
+        width: 100%;
+        height: 1px;
+        background:$light-grey;
+    }
+
+    & .catalog-category__subcategory-heading{
+        color:$black;
+        font-weight: 400;
+        position: relative;
+        padding:12px 0;
+        &_active{
+            color:$blue;
+            font-weight: bold!important;
+        }
+    }
+
+    & .catalog-category__subcategory-arrow{
+        position: absolute;
+        top:12px;
+        right:0;
+    }
+
+    & .catalog-category__subcategory-item{
+        font-weight: 400;
+    }
+}

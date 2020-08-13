@@ -180,4 +180,8 @@ $(document).ready(()=>{
 	$('.category-filter__close').on('click', ()=>{
 		$('.category-filter').fadeToggle();
 	})
+
+	$('.catalog-category__subcategory-heading').on('click', function(){
+		$(this).children('.catalog-category__subcategory-list').slideToggle();
+	});
 });
