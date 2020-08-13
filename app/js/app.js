@@ -181,7 +181,25 @@ $(document).ready(()=>{
 		$('.category-filter').fadeToggle();
 	})
 
+	// подменю на категории
+
 	$('.catalog-category__subcategory-heading').on('click', function(){
 		$(this).children('.catalog-category__subcategory-list').slideToggle();
+	});
+
+	// переключение вида сетки
+
+	$('.category-sorting__display-list').on('click',()=>{
+		$('.category-displaying .col-md-4').removeClass('col-md-4').addClass('col-md-12');
+		$('.category-displaying .product-card').addClass('list-display');
+		$('.category-sorting__display-list rect').attr('fill', '#0050FF')
+		$('.category-sorting__display-grid rect').attr('fill', '#DCD9E3')
+	});
+
+	$('.category-sorting__display-grid').on('click',()=>{
+		$('.category-displaying .col-md-12').removeClass('col-md-12').addClass('col-md-4');
+		$('.category-displaying .product-card').removeClass('list-display');
+		$('.category-sorting__display-list rect').attr('fill', '#DCD9E3')
+		$('.category-sorting__display-grid rect').attr('fill', '#0050FF')
 	});
 });
