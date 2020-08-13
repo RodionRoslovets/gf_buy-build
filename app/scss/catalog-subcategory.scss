@@ -35,4 +35,14 @@
     & .catalog-category__subcategory-item{
         font-weight: 400;
     }
+
+    & .catalog-category__subcategory-item_active{
+        background: $blue;
+        border-radius: 8px;
+        width: max-content;
+        padding: 0 12px;
+        & a{
+            color: #ffffff;
+        }
+    }
 }
