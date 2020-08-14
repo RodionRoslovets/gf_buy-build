@@ -20,7 +20,6 @@ $(document).ready(()=>{
 				items:4,
 			},
 		}
-
 	});
 
 	$('.bestsellers__arrow.arrow_left').click(function() {
@@ -202,4 +201,68 @@ $(document).ready(()=>{
 		$('.category-sorting__display-list rect').attr('fill', '#DCD9E3')
 		$('.category-sorting__display-grid rect').attr('fill', '#0050FF')
 	});
+
+	// опции цвета в товаре
+	$('.product-details__color label').on('click', ()=>{
+		let checkboxes = [...$('.product-details__color input[type="checkbox"]')],
+			colors = $('.product-details__color-option');
+
+		checkboxes.forEach((item, index) =>{
+			if(item.checked){
+				colors[index].classList.add('product-details__color-option_active');
+			}
+
+			if(!item.checked && colors[index].classList.contains('product-details__color-option_active')){
+				colors[index].classList.remove('product-details__color-option_active')
+			}
+		});
+	});
+	// опции толщины в товаре
+	$('.product-details__thickness label').on('click', ()=>{
+		let checkboxes = [...$('.product-details__thickness input[type="checkbox"]')],
+			blocks = $('.product-details__thickness-block');
+
+		checkboxes.forEach((item, index) =>{
+			if(item.checked){
+				blocks[index].classList.add('product-details__thickness-block_active');
+			}
+
+			if(!item.checked && blocks[index].classList.contains('product-details__thickness-block_active')){
+				blocks[index].classList.remove('product-details__thickness-block_active')
+			}
+		});
+	});
+
+	// вкладки с описанием и характеристиками
+	$('.description-specifications__controls span').on('click', function(){
+		$('.description-specifications__controls span').removeClass('description-specifications__controls_active');
+		$(this).addClass('description-specifications__controls_active');
+		let tabs = $('.description-specifications__tab');
+
+		$(tabs).fadeOut();
+
+		setTimeout( ()=>{
+			$(tabs[$(this).index()]).fadeIn();
+		} ,400);
+	});
+
+	// слайдер похожих товаров
+	$('.similar-products').owlCarousel({
+		items:1.3,
+		loop:true,
+		autoplay:true,
+		autoplayTimeout:3000,
+		responsive:{
+			800:{
+				items:2,
+			},
+			1000:{
+				items:3,
+			},
+			1200:{
+				items:4,
+			},
+		}
+	});
+
 });
