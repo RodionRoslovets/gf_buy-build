@@ -265,4 +265,47 @@ $(document).ready(()=>{
 		}
 	});
 
+	//переключение выбора оплаты в корзине
+
+	let paymentDivs = [...$('.cart-user-info__payment .cart-user-info__payment-item')],
+		paymentRadioInputs = [...$('.cart-user-info__payment input[type="radio"]')];
+
+		paymentRadioInputs.forEach((item, index)=>{
+			if(item.checked){
+				paymentDivs[index].classList.add('cart-user-info__payment-item_active');
+			}
+		});
+
+	$('.cart-user-info__payment label').on('click', function(){
+
+		$('.cart-user-info__payment .cart-user-info__payment-item').removeClass('cart-user-info__payment-item_active')
+
+		paymentRadioInputs.forEach((item, index)=>{
+			if(item.checked){
+				paymentDivs[index].classList.add('cart-user-info__payment-item_active');
+			}
+		});
+	})
+	//переключение выбора доставки в корзине
+
+	let deliveryDivs = [...$('.cart-user-info__delivery .cart-user-info__delivery-item')],
+		deliveryRadioInputs = [...$('.cart-user-info__delivery input[type="radio"]')];
+
+		deliveryRadioInputs.forEach((item, index)=>{
+			if(item.checked){
+				deliveryDivs[index].classList.add('cart-user-info__delivery-item_active');
+			}
+		});
+
+	$('.cart-user-info__delivery label').on('click', function(){
+
+		$('.cart-user-info__delivery .cart-user-info__delivery-item').removeClass('cart-user-info__delivery-item_active')
+
+		deliveryRadioInputs.forEach((item, index)=>{
+			if(item.checked){
+				deliveryDivs[index].classList.add('cart-user-info__delivery-item_active');
+			}
+		});
+	})
+
 });
