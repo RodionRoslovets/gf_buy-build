@@ -1,0 +1,66 @@
+.profile-button{
+    background: $yellow;
+    border:none;
+    border-radius: 6px;
+    padding: 10px 25px;
+}
+
+.profile-menu{
+    padding-top: 48px;
+    ul{
+        list-style:none;
+        @media screen and (max-width:767px){
+            display: flex;
+            overflow: auto;
+        }
+    }
+
+    &__item{
+        height: 48px;
+        line-height: 48px;
+        padding:0 0 0 16px;
+
+        @media screen and (max-width:767px){
+            height: 32px;
+            line-height: 32px;
+            white-space: nowrap;
+            border-radius: 16px;
+            background:$light-grey;
+            border:none;
+            padding:0  16px;
+        }
+        &_active{
+            background:$blue;
+            border-radius: 8px;
+            border:none!important;
+            @media screen and (max-width:767px){
+                border-radius: 16px;
+                -webkit-border-radius: 16px;
+                -moz-border-radius: 16px;
+                -ms-border-radius: 16px;
+                -o-border-radius: 16px;
+}
+            & a{
+                color:#fff!important;
+                
+            }
+
+        }
+        &:not(:last-child){
+            border-bottom:1px solid $light-grey;
+            @media screen and (max-width:767px){
+                margin-right: 16px;
+            }
+        }
+        & a{
+            color:$black;
+            font-family: $montserrat;
+            font-weight: bold;
+            @media screen and (max-width:767px){
+                color:$blue;
+                font-weight: normal;
+                font-size:$fontsize - 2px;
+            }
+        }
+    }
+}
