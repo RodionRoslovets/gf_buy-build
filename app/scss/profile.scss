@@ -162,3 +162,9 @@
         }
     }
 }
+
+.profile-favorites-page{
+    & .pagination-block{
+        @include flex(flex-end)
+    }
+}

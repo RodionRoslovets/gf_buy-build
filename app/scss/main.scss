@@ -406,6 +406,16 @@ main{
                 margin-right:16px;
             }
         }
+
+        &-favorites_active{
+            background:$red;
+            width: 26px;
+            text-align: center;
+            border-radius:4px;
+            & path{
+                stroke: #fff;
+            }
+        }
     }
 }
 
