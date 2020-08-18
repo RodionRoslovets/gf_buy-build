@@ -330,129 +330,139 @@
             </div>
         </div>
 
-        <div class="wrapper profile">
+        <div class="wrapper profile-orders-page">
             <div class="page-heading">Личный кабинет</div>
             <div class="row">
                 <div class="col-md-3">
                     <div class="profile-menu">
                         <ul>
-                            <li class="profile-menu__item profile-menu__item_active"><a href="/">Личные данные</a></li>
-                            <li class="profile-menu__item"><a href="/">История заказов</a></li>
+                            <li class="profile-menu__item "><a href="/">Личные данные</a></li>
+                            <li class="profile-menu__item profile-menu__item_active"><a href="/">История заказов</a>
+                            </li>
                             <li class="profile-menu__item"><a href="/">Избранное</a></li>
                             <li class="profile-menu__item"><a href="/">Выйти</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="cart-user-info">
-                        <p class="cart-user-info__heading">Личные данные</p>
-
-                        <div class="cart-user-info__info">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <label class="cart-user-info__field">
-                                        <p>Имя *</p>
-                                        <input type="text" value="Александр" placeholder="Имя">
-                                    </label>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="cart-user-info__field">
-                                        <p>Фамилия *</p>
-
-                                        <input type="text" value="Иванов" placeholder="Фамилия">
-                                    </label>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="cart-user-info__field">
-                                        <p>Телефон *</p>
-
-                                        <input type="text" placeholder="+7 (___) ___-__-__">
-                                    </label>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="cart-user-info__field">
-                                        <p>E-mail *</p>
-
-                                        <input type="text" value="name@site.com" placeholder="E-mail">
-                                    </label>
-                                </div>
-                                
-                            </div>
-
-                        </div>
-                        <div class="cart-user-info__address">
-                            
-                            <p class="cart-user-info__heading">Адрес</p>
-                            <div class="row">
-                                <div class="col-md-6 mr-1">
-                                    <label class="cart-user-info__field">
-                                        <p>Город *</p>
-
-                                        <input type="text" value="Смиферополь" placeholder="Город">
-                                    </label>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="cart-user-info__field">
-                                        <p>Улица *</p>
-
-                                        <input type="text" value="Ленина">
-                                    </label>
-                                </div>
-                                <div class="col-md-2 col-4">
-                                    <label class="cart-user-info__field">
-                                        <p>Дом *</p>
-
-                                        <input type="text" value="15">
-                                    </label>
-                                </div>
-                                <div class="col-md-2 col-4">
-                                    <label class="cart-user-info__field">
-                                        <p>Корпус *</p>
-
-                                        <input type="text" value="15">
-                                    </label>
-                                </div>
-                                <div class="col-md-2 col-4">
-                                    <label class="cart-user-info__field">
-                                        <p>Квартира *</p>
-
-                                        <input type="text" value="15">
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="cart-user-info__password">
-                            <p class="cart-user-info__heading">Пароль</p>
-                            <div class="row">
-                                <div class="col-md-6 mr-1">
-                                    <label class="cart-user-info__field">
-                                        <p>Старый пароль *</p>
-
-                                        <input type="text" value="" placeholder="Введите старый пароль">
-                                    </label>
-                                </div>
-                                <div class="col-md-6 mr-1">
-                                    <label class="cart-user-info__field">
-                                        <p>Новый пароль *</p>
-
-                                        <input type="text" value="" placeholder="Придумайте новый пароль">
-                                    </label>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="cart-user-info__field">
-                                        <p>Новый пароль *</p>
-
-                                        <input type="text" value="" placeholder="Повторите пароль">
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="profile-button" type="button">Сохранить изменения</button>
-                    </div>
-                </div>
+                <div class="col-md-9">
+                    <table class="profile-orders" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Наименование</th>
+                                <th>Количество</th>
+                                <th>Цена</th>
+                                <th>Сумма</th>
+                                <th>Дата</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="profile-orders__description">
+                                    <figure class="product-card__image">
+                                        <img src="images/dest/best-1.png" alt="">
+                                    </figure>
+                                    <div class="product-card__description">
+                                        <p class="product-card__name">Металлочерепица квинта плюс 0,45 PE RAL
+                                            1015
+                                            светлая слоновая кость
+                                        </p>
+                                    </div>
+                                </td>
+                                <td>10 м<sup>2</sup></td>
+                                <td>390 ₽/м<sup>2</sup></td>
+                                <td>3900 ₽/м<sup>2</sup></td>
+                                <td>02.12.2019</td>
+                            </tr>
+                            <tr>
+                                <td class="profile-orders__description">
+                                    <figure class="product-card__image">
+                                        <img src="images/dest/best-1.png" alt="">
+                                    </figure>
+                                    <div class="product-card__description">
+                                        <p class="product-card__name">Металлочерепица квинта плюс 0,45 PE RAL
+                                            1015
+                                            светлая слоновая кость
+                                        </p>
+                                    </div>
+                                </td>
+                                <td>10 м<sup>2</sup></td>
+                                <td>390 ₽/м<sup>2</sup></td>
+                                <td>3900 ₽/м<sup>2</sup></td>
+                                <td>02.12.2019</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
+            <div class="profile-orders_mobile">
+                <div class="profile-order">
+                    <div class="profile-order__description">
+                        <figure class="product-card__image">
+                            <img src="images/dest/best-1.png" alt="">
+                        </figure>
+                        <div class="product-card__description">
+                            <p class="product-card__name">Металлочерепица квинта плюс 0,45 PE RAL
+                                1015
+                                светлая слоновая кость
+                            </p>
+                        </div>
+                    </div>
+                    <div class="profile-order__specifications">
+                        <table>
+                            <tr>
+                                <td>Цена</td>
+                                <td>390 ₽/м<sup>2</sup></td>
+                            </tr>
+                            <tr>
+                                <td>Количество</td>
+                                <td>10 м<sup>2</sup></td>
+                            </tr>
+                            <tr>
+                                <td>Сумма</td>
+                                <td>3900 ₽/м<sup>2</sup></td>
+                            </tr>
+                            <tr>
+                                <td>Дата</td>
+                                <td>02.12.2019</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="profile-order">
+                    <div class="profile-order__description">
+                        <figure class="product-card__image">
+                            <img src="images/dest/best-1.png" alt="">
+                        </figure>
+                        <div class="product-card__description">
+                            <p class="product-card__name">Металлочерепица квинта плюс 0,45 PE RAL
+                                1015
+                                светлая слоновая кость
+                            </p>
+                        </div>
+                    </div>
+                    <div class="profile-order__specifications">
+                        <table>
+                            <tr>
+                                <td>Цена</td>
+                                <td>390 ₽/м<sup>2</sup></td>
+                            </tr>
+                            <tr>
+                                <td>Количество</td>
+                                <td>10 м<sup>2</sup></td>
+                            </tr>
+                            <tr>
+                                <td>Сумма</td>
+                                <td>3900 ₽/м<sup>2</sup></td>
+                            </tr>
+                            <tr>
+                                <td>Дата</td>
+                                <td>02.12.2019</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>
     </main>
 
