@@ -844,3 +844,162 @@ color: $grey;
         }
     }
 }
+
+.consult-me, 
+.product-card__price-consult{
+    cursor: pointer;
+}
+
+.modals{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,.3);
+    position: fixed;
+    top:0;
+    z-index: 99;
+    overflow-y: auto;
+
+    & .form-close{
+        cursor: pointer;
+        position: absolute;
+        top:16px;
+        right:16px;
+    }
+
+    & .form-heading{
+        font-family: $montserrat;
+        font-weight: bold;
+        font-size: $fontsize + 8px;
+        color: $black;
+    }
+}
+
+.register-form{
+    display: none;
+    position: relative;
+    background:#fff;
+    padding: 64px;
+    border-radius: 8px;
+    max-width: 480px;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    @media screen and (max-width:767px){
+        overflow-y: auto;
+        padding: 32px;
+        top: 0;
+        left: 0;
+        transform: translate(0);
+    }
+}
+
+.login-form{
+    display: none;
+    position: relative;
+    background:#fff;
+    padding: 64px;
+    border-radius: 8px;
+    max-width: 480px;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    @media screen and (max-width:767px){
+        overflow-y: auto;
+        padding: 32px;
+        top: 0;
+        left: 0;
+        transform: translate(0);
+    }
+    &__info{
+        @include flex();
+        @media screen and (max-width:767px){
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        & a{
+            white-space: nowrap;
+        }
+    }
+}
+
+.consult-form{
+    display: none;
+    position: relative;
+    background:#fff;
+    padding: 64px;
+    border-radius: 8px;
+    max-width: 480px;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    @media screen and (max-width:767px){
+        overflow-y: auto;
+        padding: 32px;
+        top: 0;
+        left: 0;
+        transform: translate(0);
+    }
+}
+
+.text-field{
+    width: 100%;
+    margin-bottom: 16px;
+    & input{
+        width: 100%;
+        border:1px solid $light-grey;
+        padding:10px 16px;
+        border-radius: 4px;
+    }
+    & p{
+        font-size: $fontsize - 4px;
+        color:$grey;
+    }
+}
+
+.form-checkbox{
+    width: 100%;
+    @include flex('flex-start', 'flex-start');
+
+    & input[type="checkbox"]{
+        display: none;
+    }
+
+    & figure{
+        width: 16px;
+        height: 16px;
+        border: 2px solid $blue;
+        border-radius: 2px;
+        margin-right: 12px;
+        position: relative;
+        top:4px;
+
+        &.checkbox_active{
+            background: $blue;
+        }
+
+        & svg{
+            position: relative;
+            top:-7px;
+            left:1px;
+        }
+    }
+}
+
+.button{
+    height: 48px;
+    font-family: $montserrat;
+    font-weight: 500;
+    font-size: $fontsize;
+    color: $black;
+    border:none;
+    background: $yellow;
+    border-radius: 8px;
+    padding: 12px 32px;
+}

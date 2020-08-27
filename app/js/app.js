@@ -1,5 +1,44 @@
 $(document).ready(()=>{
 
+	//Появление формы регистрации
+	$('.login-panel__register').on('click', function(){
+		$('.modals, .register-form').fadeIn();
+	});
+	//Исчезание формы регистрации
+	$('.register-form .form-close').on('click', function(){
+		$('.modals, .register-form').fadeOut();
+	});
+	//Чекбокс формы регистрации
+	$('.register-form .form-checkbox input[type="checkbox"]').on('click', function(){
+			$('.register-form .form-checkbox figure').toggleClass('checkbox_active');
+	});
+
+	//Появление формы регистрации
+	$('.login-panel__login').on('click', function(){
+		$('.modals, .login-form').fadeIn();
+	});
+	//Исчезание формы регистрации
+	$('.login-form .form-close').on('click', function(){
+		$('.modals, .login-form').fadeOut();
+	});
+	//Чекбокс формы входа
+	$('.login-form .form-checkbox input[type="checkbox"]').on('click', function(){
+		$('.login-form .form-checkbox figure').toggleClass('checkbox_active');
+	});
+
+	//Появление формы регистрации
+	$('.consult-me, .product-card__price-consult').on('click', function(){
+		$('.modals, .consult-form').fadeIn();
+	});
+	//Исчезание формы регистрации
+	$('.consult-form .form-close').on('click', function(){
+		$('.modals, .consult-form').fadeOut();
+	});
+	//Чекбокс формы консультации
+	$('.consult-form .form-checkbox input[type="checkbox"]').on('click', function(){
+		$('.consult-form .form-checkbox figure').toggleClass('checkbox_active');
+	});
+
 	let owlBestsellers = $('.bestsellers .row'),
 		owlManufacturers = $('.manufacturers .row');
 
