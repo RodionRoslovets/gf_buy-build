@@ -39,6 +39,21 @@ $(document).ready(()=>{
 		$('.consult-form .form-checkbox figure').toggleClass('checkbox_active');
 	});
 
+	//Меню пользователя
+	$('.user-icon, .user-name, .user-arrow-icon').on('click', function(){
+		$('.user-menu').fadeToggle();
+	});
+
+	//Мобильное меню
+	$('.menu-mobile__icon').on('click', function(){
+		$('.header-mobile-menu').fadeIn();
+	});
+
+	//Закрыли мобильное меню
+	$('.header-mobile-menu .menu-close').on('click', function(){
+		$('.header-mobile-menu').fadeOut();
+	});
+
 	let owlBestsellers = $('.bestsellers .row'),
 		owlManufacturers = $('.manufacturers .row');
 

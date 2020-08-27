@@ -150,6 +150,7 @@
     position: relative;
     @media screen and (max-width:767px){
         padding:0 16px 0 0;
+        display: none;
     }
     &-icon{
         margin: 0 14px 0 0;
@@ -333,4 +334,96 @@
 
 .social-enter{
     @include flex;
+}
+
+.header-mobile-menu{
+    display: none;
+    background:#fff;
+    width: 100%;
+    position: absolute;
+    top:0;
+    z-index: 99;
+    padding: 48px 24px 24px;
+    filter: drop-shadow(0px 20px 60px rgba(152, 162, 185, 0.3));
+
+    & .menu-close{
+        position: absolute;
+        top:16px;
+        right:16px;
+    }
+
+    & .login{
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 32px;
+    }
+
+    & .user{
+        display: block;
+
+        &-block{
+            @include flex(flex-start);
+        }
+
+        &-menu{
+            display: block;
+            position: relative;
+            background:transparent;
+            top:0;
+            right: 0;
+            padding: 0;
+            border-bottom:1px solid $light-grey;
+
+            &__item{
+                border:none;
+
+                & a{
+                    padding: 0;
+                    font-family:$montserrat;
+                }
+            }
+        }
+    }
+
+    & .header-top-menu{
+        display: block;
+
+        &__list{
+            flex-direction:column;
+            align-items:flex-start;
+            border-bottom:1px solid $light-grey;
+            margin-bottom: 24px;
+
+            &-item{
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+    & .header-controls{
+        display: block;
+        border-bottom:1px solid $light-grey;
+        margin-bottom: 24px;
+
+        &__icon{
+            margin:0 16px 24px 0;
+        }
+
+        & a{
+            @include flex(flex-start,flex-start);
+            padding: 0;
+        }
+    }
+
+    & .working-hours{
+        display: block;
+
+        &__block{
+            @include flex(flex-start, flex-start);
+
+            & figure{
+                margin-right: 16px;
+            }
+        }
+    }
 }

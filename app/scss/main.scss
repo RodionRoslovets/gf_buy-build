@@ -1003,3 +1003,61 @@ color: $grey;
     border-radius: 8px;
     padding: 12px 32px;
 }
+
+.user{
+    @include flex;
+    position: relative;
+
+    @media screen and (max-width:767px){
+        display: none;
+    }
+
+    &-icon{
+        margin-right: 14px;
+    }
+
+    &-name{
+        margin-right: 8px;
+        cursor: pointer;
+    }
+
+    &-menu{
+        width: 220px;
+        display: none;
+        position: absolute;
+        top:100%;
+        right: 0;
+        background:#fff;
+        z-index: 99;
+        filter: drop-shadow(0px 20px 60px rgba(152, 162, 185, 0.3));
+        border-radius: 8px;
+        padding: 14px;
+
+        & ul{
+            list-style:none;
+        }
+
+        &__item{
+            height: 40px;
+            border-bottom:1px solid $light-grey;
+            line-height: 40px;
+            cursor: pointer;
+
+            &:hover{
+                background:$blue;
+                border-radius: 8px;
+
+                & a{
+                    color:#fff;
+                }
+            }
+
+            & a{
+                display: block;
+                color:$black;
+                text-decoration: none;
+                padding-left: 14px;
+            }
+        }
+    }
+}
