@@ -1,0 +1,123 @@
+.compare{
+
+    &-page{
+        .description-specifications__controls{
+            overflow-x:auto;
+            padding-bottom: 19px;
+        }
+
+        .description-specifications__controls span{
+            white-space: nowrap;
+            @media screen and (max-width:767px){
+                font-size:$fontsize - 2px;
+                margin-right: 32px;
+            }
+        }
+
+        
+    }
+
+    &-options{
+        @include flex;
+
+        &__options{
+            @include flex;
+            overflow-x: auto;
+        }
+
+        &__arrows{
+            @include flex;
+            height: 32px;
+
+            @media screen and (max-width:767px){
+                position: fixed;
+                right:0;
+                bottom:30%;
+                z-index: 999;
+                height: auto;
+                border-radius: 6px;
+                box-shadow: 0px 1px 9px 6px $light-grey;
+            }
+        }
+    
+        &__arrow{
+            background:#fff;
+            border: 1px solid $light-grey;
+            color:$blue;
+            font-weight: bold;
+            width: 32px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        & label{
+            @include flex(flex-start);
+            margin-right: 16px;
+            white-space: nowrap;
+
+            & input[type="radio"]{
+                display: none;
+            }
+
+            @media screen and (max-width:767px){
+                font-size:$fontsize - 2px;
+            }
+        }
+
+        &__item{
+            width: 16px;
+            height: 16px;
+            background:#fff;
+            border:1px solid $blue;
+            position: relative;
+            margin-right: 16px;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+
+            @media screen and (max-width:767px){
+                min-width: 16px;
+            }
+
+            & svg{
+                position: absolute;
+                top:3px;
+                left:3px;
+                opacity: 0;
+            }
+        }
+
+        &__item_active{
+            & svg{
+                opacity: 1!important;
+            }
+        }
+    }
+
+    &-specification{
+        margin-top: 40px;
+        &__heading{
+            font-family: $montserrat;
+            font-weight: bold;
+            font-size: $fontsize + 2px;
+            color: $black;
+            margin-bottom: 16px;
+        }
+
+        &__row{
+            background: #FBFAFC;
+            border-radius: 6px;
+            padding: 11px 24px;
+
+            &-item{
+                @media screen and (max-width:767px){
+                    font-size: $fontsize - 2px;
+                }
+            }
+        }
+    }
+
+
+}

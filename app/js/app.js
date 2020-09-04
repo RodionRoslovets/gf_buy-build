@@ -13,11 +13,11 @@ $(document).ready(()=>{
 			$('.register-form .form-checkbox figure').toggleClass('checkbox_active');
 	});
 
-	//Появление формы регистрации
+	//Появление формы входа
 	$('.login-panel__login').on('click', function(){
 		$('.modals, .login-form').fadeIn();
 	});
-	//Исчезание формы регистрации
+	//Исчезание формы входа
 	$('.login-form .form-close').on('click', function(){
 		$('.modals, .login-form').fadeOut();
 	});
@@ -26,11 +26,11 @@ $(document).ready(()=>{
 		$('.login-form .form-checkbox figure').toggleClass('checkbox_active');
 	});
 
-	//Появление формы регистрации
+	//Появление формы консультации
 	$('.consult-me, .product-card__price-consult').on('click', function(){
 		$('.modals, .consult-form').fadeIn();
 	});
-	//Исчезание формы регистрации
+	//Исчезание формы консультации
 	$('.consult-form .form-close').on('click', function(){
 		$('.modals, .consult-form').fadeOut();
 	});
@@ -319,6 +319,34 @@ $(document).ready(()=>{
 		}
 	});
 
+	// слайдер сравнения
+	$('.compare-products, .compare-specification__row').owlCarousel({
+		items:1.3,
+		loop:true,
+		mouseDrag:false,
+		touchDrag:false,
+		responsive:{
+			800:{
+				items:2,
+			},
+			1000:{
+				items:3,
+			},
+			1200:{
+				items:4,
+			},
+		}
+	});
+
+	let owlCompareStrings = $('.compare-specification__row, .compare-products');
+
+	$('.compare-options__arrow.arrow_left').on('click', function(){
+		owlCompareStrings.trigger('prev.owl.carousel');
+	});
+	$('.compare-options__arrow.arrow_right').on('click', function(){
+		owlCompareStrings.trigger('next.owl.carousel');
+	});
+
 	//переключение выбора оплаты в корзине
 
 	let paymentDivs = [...$('.cart-user-info__payment .cart-user-info__payment-item')],
@@ -358,6 +386,27 @@ $(document).ready(()=>{
 		deliveryRadioInputs.forEach((item, index)=>{
 			if(item.checked){
 				deliveryDivs[index].classList.add('cart-user-info__delivery-item_active');
+			}
+		});
+	})
+
+	//Переключение характеристик на странице сравнения
+	let compareDivs = [...$('.compare-options__item')],
+		compareRadioInputs = [...$('.compare-options__options input[type="radio"]')];
+
+		compareRadioInputs.forEach((item, index)=>{
+			if(item.checked){
+				compareDivs[index].classList.add('compare-options__item_active');
+			}
+		});
+
+	$('.compare-options__options label').on('click', function(){
+
+		$('.compare-options__item').removeClass('compare-options__item_active')
+
+		compareRadioInputs.forEach((item, index)=>{
+			if(item.checked){
+				compareDivs[index].classList.add('compare-options__item_active');
 			}
 		});
 	})
